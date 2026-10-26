@@ -1,0 +1,9 @@
+project: savantenvs/pod5-file-format
+target: fuzz_file
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_file/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_file
+    libfuzzer: true
+    timeout: 10
